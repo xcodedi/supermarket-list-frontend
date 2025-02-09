@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "AvenirNet";
+  src: url("../public/fonts/AvenirNet-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNet";
+  src: url("../public/fonts/AvenirNet-BoltIt.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AvenirNet";
+  src: url("../public/fonts/AvenirNet-Regular.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "AvenirNet", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-weight: bold;
+  color: black;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: lightgrey;
+}

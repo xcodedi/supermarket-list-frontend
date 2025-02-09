@@ -1,0 +1,18 @@
+body {
+  font-family: "AvenirNet", sans-serif;
+}
+
+.regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+  font-style: normal;
+}

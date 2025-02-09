@@ -1,0 +1,13 @@
+.list-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 934px;
+  height: 58px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  background-color: rgb(78, 140, 211);
+}
