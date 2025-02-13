@@ -1,6 +1,6 @@
 import "./index.css";
 
-export const ListCard = ({ item, onCheckItem }) => {
+export const ListCard = ({ item, onCheckItem, onClick }) => {
   return (
     <div className="list-card-container">
       <img

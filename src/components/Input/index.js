@@ -9,7 +9,7 @@ export const Input = ({ label, placeholder, value, onChange, type }) => {
         className="input"
         placeholder={placeholder}
         value={value}
-        type="type || text"
+        type={type || "text"}
       />
     </div>
   );

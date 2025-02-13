@@ -10,6 +10,7 @@ export const ListScreen = () => {
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [listItems, setListItems] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const loadListItems = async () => {
     setLoading(true);
@@ -24,14 +25,20 @@ export const ListScreen = () => {
   }, []);
 
   const onClickAddButton = () => {
+    setSelectedItem(null);
     setShowModal(true);
   };
 
   const onCloseModal = () => {
     setShowModal(false);
+    loadListItems();
+    setSelectedItem(null);
   };
 
-  const onEditItem = (itemId) => {};
+  const onEditItem = (item) => {
+    setSelectedItem(item);
+    setShowModal(true);
+  };
 
   return (
     <div className="list-screen-container">
@@ -60,8 +67,7 @@ export const ListScreen = () => {
         </div>
       </div>
 
-      {}
-      {showModal && <Modal onClose={onCloseModal} />}
+      {showModal && <Modal item={selectedItem} onClose={onCloseModal} />}
     </div>
   );
 };
