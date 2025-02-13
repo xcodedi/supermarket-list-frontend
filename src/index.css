@@ -19,6 +19,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AvenirNextMedium";
+  src: url("../public/fonts/AvenirNext-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "AvenirNextMedium", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: "AvenirNet", sans-serif;
@@ -40,4 +51,9 @@ h3 {
   font-weight: bold;
   font-size: 16px;
   color: lightgrey;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  visibility: hidden;
 }

@@ -6,10 +6,11 @@ export const ListCard = ({ item, onCheckItem }) => {
       <img
         className="checkbox-container"
         src={`/images/${item?.checked ? "checked.svg" : "unchecked.svg"}`}
-        alt="checked-item"
+        alt={item?.checked ? "checked-item" : "unchecked-item"}
         onClick={() => onCheckItem(item.id)}
       />
-      <span>{item.title}</span>
+      <span className="list-card-title">{item.name}</span>
+      <span className="list-card-subtitle">{item.quantity}units</span>
     </div>
   );
 };

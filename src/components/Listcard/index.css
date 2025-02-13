@@ -1,18 +1,18 @@
 .list-card-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  width: 800px;
+  justify-content: flex-start;
+  padding: 0 12px;
+  width: 732px;
   height: 58px;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
+  background-color: #f2f4ff;
   border-radius: 12px;
   margin-bottom: 24px;
-  background-color: rgb(78, 140, 211);
+  cursor: pointer;
+  min-height: 58px;
 }
-
-.checkbox-container {
+.checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,4 +20,24 @@
   height: 24px;
   object-fit: contain;
   cursor: pointer;
+  margin-right: 12px;
+}
+.list-card-text-container {
+  display: flex;
+  width: 97%;
+  flex-direction: column;
+}
+.list-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.list-card-subtitle {
+  font-size: 14px;
+}
+.arrow-icon {
+  width: 6px;
+  height: 12px;
+  object-fit: contain;
 }

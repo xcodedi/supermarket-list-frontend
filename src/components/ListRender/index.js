@@ -1,8 +1,9 @@
+import "./index.css";
 import { ListCard } from "../Listcard";
 
 export const ListRender = ({ listItems }) => {
   return listItems.length > 0 ? (
-    <ul>
+    <ul className="list-render-container">
       {listItems.map((item, index) => (
         <li key={index}>
           <ListCard item={item} />
