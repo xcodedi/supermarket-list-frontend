@@ -4,8 +4,10 @@ import { getList } from "../../services/request/index";
 import { ListRender } from "../../components/ListRender";
 import { Loader } from "../../components/Loader";
 import { Button } from "../../components/Button";
+import { Modal } from "../../components/Modal";
 
 export const ListScreen = () => {
+  const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [listItems, setListItems] = useState([]);
 
@@ -21,9 +23,13 @@ export const ListScreen = () => {
     loadListItems();
   }, []);
 
-  const onClickAddButton = () => {};
+  const onClickAddButton = () => {
+    setShowModal(true);
+  };
 
-  const onCheckItem = (itemId) => {};
+  const onCloseModal = () => {
+    setShowModal(false);
+  };
 
   const onEditItem = (itemId) => {};
 
@@ -49,14 +55,13 @@ export const ListScreen = () => {
           {loading ? (
             <Loader />
           ) : (
-            <ListRender
-              onCheckItem={onCheckItem}
-              onEdit={onEditItem}
-              list={listItems}
-            />
+            <ListRender onEdit={onEditItem} list={listItems} />
           )}
         </div>
       </div>
+
+      {}
+      {showModal && <Modal onClose={onCloseModal} />}
     </div>
   );
 };

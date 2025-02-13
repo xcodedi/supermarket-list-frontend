@@ -1,0 +1,50 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 26vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal-close-button {
+  height: 24px;
+  width: 24px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../../public/img/close-icon.jpg");
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.modal-space {
+  height: 70vh;
+}
