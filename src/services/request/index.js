@@ -30,3 +30,12 @@ export const updateItem = async (item, id) => {
     alert("Error to update item");
   }
 };
+
+export const deleteItem = async (id) => {
+  try {
+    const response = await api.delete(`/list-item/${id}`);
+    return response.data;
+  } catch (error) {
+    alert("Error to delete item");
+  }
+};

@@ -2,7 +2,11 @@ import "./index.css";
 import { useState } from "react";
 import { Input } from "../Input";
 import { Button } from "../Button";
-import { createItem, updateItem } from "../../services/request/index";
+import {
+  createItem,
+  updateItem,
+  deleteItem,
+} from "../../services/request/index";
 
 export const Modal = ({ onClose, item }) => {
   const [name, setName] = useState(item ? item.name : "");
@@ -21,6 +25,14 @@ export const Modal = ({ onClose, item }) => {
     const result = await createItem({ name, quantity: Number(quantity) });
     if (!result?.error) {
       alert("Item created successfully");
+      onClose();
+    }
+  };
+
+  const onDeleteItem = async () => {
+    const result = await deleteItem(item.id);
+    if (!result?.error) {
+      alert("Item deleted successfully");
       onClose();
     }
   };
@@ -69,7 +81,12 @@ export const Modal = ({ onClose, item }) => {
           type="number"
         />
 
-        <div className="modal-space">
+        <div className="buttons-container">
+          {item && (
+            <Button icon="trash" variant="outline" onClick={onDeleteItem}>
+              Delete item
+            </Button>
+          )}
           <Button onClick={item ? onUpdateItem : onAddItem}>
             {item ? "Save" : "Add"}
           </Button>

@@ -48,3 +48,12 @@
 .modal-space {
   height: 70vh;
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  height: 12vh;
+  justify-content: space-between;
+  margin-top: 62vh;
+  width: 100%;
+}
