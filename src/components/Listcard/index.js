@@ -1,11 +1,11 @@
 import "./index.css";
 
-export const ListCard = ({ item, onCheckItem, onClick }) => {
+export const ListCard = ({ item, onCheckItem }) => {
   return (
     <div className="list-card-container">
       <img
         className="checkbox-container"
-        src={`/images/${item?.checked ? "checked.svg" : "unchecked.svg"}`}
+        src={`/images/${item?.checked ? "checked.jpg" : "unchecked.jpg"}`}
         alt={item?.checked ? "checked-item" : "unchecked-item"}
         onClick={() => onCheckItem(item.id)}
       />

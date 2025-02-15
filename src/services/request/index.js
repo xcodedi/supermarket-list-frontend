@@ -11,20 +11,16 @@ export const getList = async () => {
 
 export const createItem = async (item) => {
   try {
-    const response = await api.post("/list-item", {
-      ...item,
-    });
+    const response = await api.post("/list-item", item);
     return response.data;
   } catch (error) {
     alert("Error to create item");
   }
 };
 
-export const updateItem = async (item, id) => {
+export const updateItem = async (id, item) => {
   try {
-    const response = await api.put(`/list-item/${id}`, {
-      ...item,
-    });
+    const response = await api.put(`/list-item/${id}`, item);
     return response.data;
   } catch (error) {
     alert("Error to update item");
