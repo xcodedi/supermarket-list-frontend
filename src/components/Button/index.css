@@ -11,6 +11,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 420px) {
+  .button-container {
+    max-width: 300px;
+  }
+}
+
 .main {
   background-color: rgb(89, 127, 209);
   color: white;
