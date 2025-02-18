@@ -1,9 +1,11 @@
-# Supermarket List (Frontend)
+# Supermarket List (FRONT_END)
 
 ## Introduction
 
 Supermarket List is a web application designed to help users manage their grocery lists efficiently. It allows users to create, edit, delete, and manage their shopping lists through an intuitive interface.
 The application consumes data from the [Supermarket List Backend API](https://github.com/xcodedi/supermarket-list-backend-api).
+
+<p><img height="500" src="https://github.com/xcodedi/supermarket-list-frontend/blob/main/public/img/real.JPG"></P>
 
 ## Technologies Used
 
